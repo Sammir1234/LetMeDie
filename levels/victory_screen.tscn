@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ddslhgj1n5ug6"]
+
+[ext_resource type="Script" uid="uid://dpb7ocj0j5p2l" path="res://scripts/victory_screen.gd" id="1_iiukn"]
+[ext_resource type="Texture2D" uid="uid://ba2t8riqbg4m8" path="res://textures/WINscreen.png" id="2_j75fc"]
+[ext_resource type="PackedScene" uid="uid://diapewb8okd7f" path="res://game_objects/on_level_objects/narrator_ui.tscn" id="3_d2fx3"]
+
+[node name="VictoryScreen" type="Control" unique_id=1015264722]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iiukn")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1605973136]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_j75fc")
+expand_mode = 1
+
+[node name="NarratorUI" parent="." unique_id=2121248254 instance=ExtResource("3_d2fx3")]

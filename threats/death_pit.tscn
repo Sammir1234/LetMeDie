@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b0sn7c1w2o71i"]
+
+[ext_resource type="Texture2D" uid="uid://cesc4v5dblj0r" path="res://textures/placeholders/images.jpg" id="1_eaih3"]
+[ext_resource type="Script" uid="uid://b1f4wucxlk5f8" path="res://scripts/threat_behavior.gd" id="2_bjkmc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+
+[node name="Death Pit" type="StaticBody2D" unique_id=2111806110]
+scale = Vector2(10, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1323196627]
+scale = Vector2(0.052, 0.09)
+texture = ExtResource("1_eaih3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1185588996]
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1091163355]
+script = ExtResource("2_bjkmc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=559019175]
+scale = Vector2(1.03, 1.03)
+shape = SubResource("RectangleShape2D_g4v7s")

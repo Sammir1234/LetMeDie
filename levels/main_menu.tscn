@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://b8qiymd6sp1a8"]
+
+[ext_resource type="Script" uid="uid://dpowhu4bfia0h" path="res://scripts/main_menu.gd" id="1_0ettg"]
+
+[node name="MainMenu" type="Control" unique_id=100910809]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0ettg")
+
+[node name="Background" type="TextureRect" parent="." unique_id=692034098]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+
+[node name="Title" type="Label" parent="." unique_id=1671633046]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 43.0
+offset_right = 534.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 100
+text = "Let Me Die"
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=829488905]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 268.0
+offset_right = 351.0
+offset_bottom = 609.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=841767499]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1475203329]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Играть"
+
+[node name="CreditsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=869472129]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Кредиты"
+
+[node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=847541592]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Выход"

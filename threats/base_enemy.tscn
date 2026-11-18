@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b0dejbo3qtdb6"]
+
+[ext_resource type="Script" uid="uid://d7r8l20tfntu" path="res://scripts/base_enemy_behaivor.gd" id="1_nxij1"]
+[ext_resource type="Texture2D" uid="uid://18ihlwo876gm" path="res://textures/placeholders/amogus.jpg" id="2_i7jhq"]
+[ext_resource type="Script" uid="uid://b1f4wucxlk5f8" path="res://scripts/threat_behavior.gd" id="3_i7jhq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82qyd"]
+size = Vector2(28, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5c27"]
+size = Vector2(29.126215, 27.184467)
+
+[node name="Base Enemy" type="CharacterBody2D" unique_id=1683792110]
+script = ExtResource("1_nxij1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=311270027]
+position = Vector2(-4.7683716e-07, -2.3841858e-07)
+scale = Vector2(0.023828128, 0.039583333)
+texture = ExtResource("2_i7jhq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=805170903]
+shape = SubResource("RectangleShape2D_82qyd")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=999037761]
+script = ExtResource("3_i7jhq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1380188304]
+scale = Vector2(1.03, 1.03)
+shape = SubResource("RectangleShape2D_j5c27")

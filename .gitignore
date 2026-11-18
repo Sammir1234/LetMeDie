@@ -1,0 +1,13 @@
+# Godot cache
+.godot/
+
+# Imported resources
+.import/
+
+# Temporary files
+*.tmp
+*.bak
+
+# IDE
+.idea/
+.vscode/

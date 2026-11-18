@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b3welbb5y41aj"]
+
+[ext_resource type="PackedScene" uid="uid://b4cn678kfidir" path="res://game_objects/on_level_objects/main_char.tscn" id="1_ykrsh"]
+[ext_resource type="PackedScene" uid="uid://bd8nwimeda0lg" path="res://game_objects/landscape/big_platform.tscn" id="2_ppyta"]
+[ext_resource type="PackedScene" uid="uid://ck10wtgs1f8eh" path="res://game_objects/landscape/small_platform.tscn" id="3_ykrsh"]
+[ext_resource type="PackedScene" uid="uid://dvoyx7gcxovf4" path="res://game_objects/landscape/medium_platform.tscn" id="4_ppyta"]
+[ext_resource type="PackedScene" uid="uid://b0dejbo3qtdb6" path="res://threats/base_enemy.tscn" id="5_ykrsh"]
+[ext_resource type="PackedScene" uid="uid://v5btu12b65pj" path="res://game_objects/landscape/wall.tscn" id="6_g14j6"]
+[ext_resource type="PackedScene" uid="uid://blo2pjdolruuo" path="res://threats/death_pit.tscn" id="7_vbegm"]
+[ext_resource type="PackedScene" uid="uid://ck43fl25c6jab" path="res://threats/saw.tscn" id="8_ehkex"]
+
+[node name="Node2D" type="Node2D" unique_id=1278685971]
+metadata/_edit_horizontal_guides_ = [-147.0]
+
+[node name="MainChar" parent="." unique_id=1468150298 instance=ExtResource("1_ykrsh")]
+
+[node name="Big Platform" parent="." unique_id=2111806110 instance=ExtResource("2_ppyta")]
+position = Vector2(-2, 298)
+
+[node name="Small Platform" parent="." unique_id=1381562995 instance=ExtResource("3_ykrsh")]
+position = Vector2(442, 59)
+
+[node name="Medium Platform" parent="." unique_id=640845297 instance=ExtResource("4_ppyta")]
+position = Vector2(-531, 54)
+
+[node name="Base Enemy" parent="." unique_id=1683792110 instance=ExtResource("5_ykrsh")]
+position = Vector2(-240, 86)
+
+[node name="Wall" parent="." unique_id=1744937822 instance=ExtResource("6_g14j6")]
+position = Vector2(502, -26.000002)
+
+[node name="Wall2" parent="." unique_id=757310966 instance=ExtResource("6_g14j6")]
+position = Vector2(397, -159)
+
+[node name="Death Pit" parent="." unique_id=1087629991 instance=ExtResource("7_vbegm")]
+position = Vector2(637, 51)
+
+[node name="Death Pit2" parent="." unique_id=368391813 instance=ExtResource("8_ehkex")]
+position = Vector2(-681, -23)

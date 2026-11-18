@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://ck43fl25c6jab"]
+
+[ext_resource type="AudioStream" uid="uid://bq8cm6qlnp7j8" path="res://sounds/die.mp3" id="2_2p1y6"]
+[ext_resource type="Script" uid="uid://b1f4wucxlk5f8" path="res://scripts/threat_behavior.gd" id="2_qvpct"]
+[ext_resource type="Texture2D" uid="uid://o6qgqv0mk2o5" path="res://textures/spritesheets/animations/saw_sheet.svg" id="4_qvpct"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2p1y6"]
+atlas = ExtResource("4_qvpct")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvpct"]
+atlas = ExtResource("4_qvpct")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4q0fe"]
+atlas = ExtResource("4_qvpct")
+region = Rect2(192, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dm8f7"]
+atlas = ExtResource("4_qvpct")
+region = Rect2(96, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmnvv"]
+atlas = ExtResource("4_qvpct")
+region = Rect2(0, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_murvj"]
+atlas = ExtResource("4_qvpct")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2p1y6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvpct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4q0fe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm8f7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmnvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_murvj")
+}],
+"loop": 1,
+"name": &"saw",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+
+[node name="Saw" type="StaticBody2D" unique_id=2111806110]
+scale = Vector2(3, 3)
+
+[node name="SawAnimation" type="AnimatedSprite2D" parent="." unique_id=135446498]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"saw"
+autoplay = "saw"
+frame_progress = 0.70192623
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1091163355]
+script = ExtResource("2_qvpct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=559019175]
+scale = Vector2(1.03, 1.03)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="Area2D" unique_id=1246947848]
+scale = Vector2(0.050652258, 0.040486015)
+stream = ExtResource("2_2p1y6")
+volume_db = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1185588996]
+shape = SubResource("RectangleShape2D_g4v7s")
