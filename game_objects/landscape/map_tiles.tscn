@@ -1,8 +1,52 @@
 [gd_scene format=3 uid="uid://bjw7scx5xmdnn"]
 
 [ext_resource type="Texture2D" uid="uid://bv8d8qolewpfi" path="res://textures/spritesheets/tiles/tileset_ground.svg" id="1_6gee5"]
+[ext_resource type="Texture2D" uid="uid://cbcvm5jched4p" path="res://textures/spritesheets/tiles/tileset_threat_v3.svg" id="1_hio7c"]
 [ext_resource type="Texture2D" uid="uid://bmmtwxlc311md" path="res://textures/spritesheets/tiles/tileset_threat.svg" id="2_l2yv5"]
 [ext_resource type="Texture2D" uid="uid://dfwm81ox65mo2" path="res://textures/spritesheets/tiles/tileset_threat_v2.svg" id="3_l2yv5"]
+[ext_resource type="Texture2D" uid="uid://b28pyu442fwct" path="res://textures/spritesheets/animations/flag_sheet.svg" id="5_j8smh"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lrbma"]
+texture = ExtResource("1_hio7c")
+texture_region_size = Vector2i(96, 96)
+0:0/animation_speed = 3.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-36, -36, 36, -36, 36, 36, -36, 36)
+0:0/0/custom_data_1 = true
+0:1/animation_speed = 3.0
+0:1/animation_frame_0/duration = 1.0
+0:1/animation_frame_1/duration = 1.0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -24, 48, -24, 48, 48, -48, 48)
+4:1/0/custom_data_1 = true
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
+5:1/0/custom_data_1 = true
+0:2/animation_speed = 3.0
+0:2/animation_frame_0/duration = 1.0
+0:2/animation_frame_1/duration = 1.0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-36, -48, 36, -48, 36, 48, -36, 48)
+0:2/0/custom_data_1 = true
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, -48, 48, 48, 48, 48, -12, 36, -12, 36, -48)
+2:2/0/custom_data_1 = true
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -24, 12, -24, 36, 48, -36, 48)
+3:2/0/custom_data_0 = true
+2:1/animation_speed = 3.0
+2:1/animation_frame_0/duration = 1.0
+2:1/animation_frame_1/duration = 1.0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hio7c"]
 resource_name = "Ground"
@@ -108,8 +152,21 @@ texture_region_size = Vector2i(48, 48)
 4:4/0/custom_data_1 = true
 6:5/size_in_atlas = Vector2i(2, 1)
 6:5/0 = 0
-6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.27548218, -0.5509567, 48, 18.732788, -48, 20.385681)
+6:5/0/texture_origin = Vector2i(0, -22)
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13, 19.5, 12, 19.5, 48, 48, -48, 48)
 6:5/0/custom_data_0 = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v5emy"]
+texture = ExtResource("5_j8smh")
+texture_region_size = Vector2i(96, 96)
+0:0/animation_columns = 2
+0:0/animation_speed = 3.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/0 = 0
+0:0/0/custom_data_2 = true
 
 [sub_resource type="TileSet" id="TileSet_efrfc"]
 tile_size = Vector2i(96, 96)
@@ -118,9 +175,13 @@ custom_data_layer_0/name = "Spike"
 custom_data_layer_0/type = 1
 custom_data_layer_1/name = "Lava"
 custom_data_layer_1/type = 1
+custom_data_layer_2/name = "Win"
+custom_data_layer_2/type = 1
 sources/1 = SubResource("TileSetAtlasSource_hio7c")
 sources/2 = SubResource("TileSetAtlasSource_j8smh")
 sources/3 = SubResource("TileSetAtlasSource_vo075")
+sources/0 = SubResource("TileSetAtlasSource_lrbma")
+sources/4 = SubResource("TileSetAtlasSource_v5emy")
 
 [node name="MapTiles" type="TileMapLayer" unique_id=503539841]
 scale = Vector2(0.7, 0.7)

@@ -1,7 +1,7 @@
 extends Control
 
 # Сцена последнего уровня
-const LAST_LEVEL = "res://levels/level_67.tscn"
+const LAST_LEVEL = "res://levels/level.tscn"
 
 # Привязка функций к кнопкам
 func _ready() -> void:

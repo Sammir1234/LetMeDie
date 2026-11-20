@@ -27,6 +27,9 @@ const DIRECTION_MEMORY_TIME = 250 # Время памяти направлени
 var last_vertical_direction = Vector2.ZERO # Направление вертикальной атаки
 var last_vertical_press_time = 0
 
+# Текущая зона
+var current_zone: int = -1
+
 # Атака мечом
 @onready var sword_attack = $SwordAttack
 
@@ -51,9 +54,13 @@ func _ready() -> void:
 func die() -> void:
 	if is_dead:
 		return
-		
 	
 	is_dead = true
+	print(current_zone)
+	if current_zone != -1:
+		Global.register_zone_death(current_zone)
+		
+	print(Global.zone_death_count)
 	
 	velocity = Vector2.ZERO
 	set_physics_process(false)
@@ -118,6 +125,18 @@ func _on_bounce_requested(impulse: Vector2) -> void:
 
 func _physics_process(delta: float) -> void:
 	var on_floor = is_on_floor()
+	
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+
+		var collider = collision.get_collider()
+
+		# Проверяем, что столкновение произошло с TileMapLayer
+		if collision.get_collider().name == "TileMapTraps":
+			die()
+		if collision.get_collider().name == "WinFlag":
+			await get_tree().create_timer(0.35).timeout
+			get_tree().change_scene_to_file("res://levels/victory_screen.tscn")
 	
 	if Input.is_action_just_pressed("ui_up"):
 		last_vertical_direction = Vector2.UP

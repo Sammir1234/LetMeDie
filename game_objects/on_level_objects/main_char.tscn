@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://b4cn678kfidir"]
 
-[ext_resource type="Script" uid="uid://gkvujagcn8ll" path="res://scripts/char_behavior.gd" id="1_j5c27"]
+[ext_resource type="Script" uid="uid://gkvujagcn8ll" path="res://scripts/behaivor_scripts/char_behavior.gd" id="1_j5c27"]
 [ext_resource type="Texture2D" uid="uid://c7cto1n1ngqox" path="res://textures/spritesheets/animations/chara_sheet_32.svg" id="2_3i3ks"]
 [ext_resource type="AudioStream" uid="uid://co71sedje48qb" path="res://sounds/land.mp3" id="3_2lkcu"]
 [ext_resource type="AudioStream" uid="uid://cq8wpyo1tfkki" path="res://sounds/jump.mp3" id="4_f1fto"]
 [ext_resource type="Script" uid="uid://dnq2avrajj4ro" path="res://scripts/sword_attack.gd" id="5_6cxyb"]
 [ext_resource type="AudioStream" uid="uid://bq8cm6qlnp7j8" path="res://sounds/die.mp3" id="5_tysbl"]
 [ext_resource type="Texture2D" uid="uid://xu4jlfm8x3v5" path="res://textures/spritesheets/animations/Slash_short.svg" id="7_qf0cs"]
-[ext_resource type="Script" uid="uid://bs2jrt1xorw5w" path="res://game_objects/on_level_objects/hitbox.gd" id="9_3i3ks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nxij1"]
 size = Vector2(31, 32)
@@ -315,9 +314,6 @@ animations = [{
 "speed": 25.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(20.816326, 20.408163)
-
 [node name="MainChar" type="CharacterBody2D" unique_id=1468150298]
 script = ExtResource("1_j5c27")
 
@@ -354,14 +350,6 @@ shape = SubResource("RectangleShape2D_yf5fn")
 [node name="AttackAnimation" type="AnimatedSprite2D" parent="SwordAttack" unique_id=228329491]
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"attack_short"
-
-[node name="Hitbox" type="Area2D" parent="." unique_id=1132792153]
-script = ExtResource("9_3i3ks")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=545291064]
-position = Vector2(-0.4999986, 1.1622906e-06)
-scale = Vector2(2.45, 2.45)
-shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Audio" type="Node" parent="." unique_id=965214180]
 

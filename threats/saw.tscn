@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ck43fl25c6jab"]
 
 [ext_resource type="AudioStream" uid="uid://bq8cm6qlnp7j8" path="res://sounds/die.mp3" id="2_2p1y6"]
-[ext_resource type="Script" uid="uid://b1f4wucxlk5f8" path="res://scripts/threat_behavior.gd" id="2_qvpct"]
+[ext_resource type="Script" uid="uid://b1f4wucxlk5f8" path="res://scripts/behaivor_scripts/threat_behavior.gd" id="2_qvpct"]
 [ext_resource type="Texture2D" uid="uid://o6qgqv0mk2o5" path="res://textures/spritesheets/animations/saw_sheet.svg" id="4_qvpct"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2p1y6"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://v1qa8lj7knut"]
 
 [ext_resource type="PackedScene" uid="uid://cck281iej7jdv" path="res://game_objects/on_level_objects/win_flag.tscn" id="1_ksc0h"]
-[ext_resource type="Script" uid="uid://d03qginwm011s" path="res://scripts/fake_win_flag.gd" id="2_xkrjx"]
+[ext_resource type="Script" uid="uid://d03qginwm011s" path="res://scripts/behaivor_scripts/fake_win_flag.gd" id="2_xkrjx"]
 
 [node name="FakeWinFlag" unique_id=496324948 instance=ExtResource("1_ksc0h")]
 script = ExtResource("2_xkrjx")

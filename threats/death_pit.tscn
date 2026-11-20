@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0sn7c1w2o71i"]
 
 [ext_resource type="Texture2D" uid="uid://cesc4v5dblj0r" path="res://textures/placeholders/images.jpg" id="1_eaih3"]
-[ext_resource type="Script" uid="uid://b1f4wucxlk5f8" path="res://scripts/threat_behavior.gd" id="2_bjkmc"]
+[ext_resource type="Script" uid="uid://b1f4wucxlk5f8" path="res://scripts/behaivor_scripts/threat_behavior.gd" id="2_bjkmc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 

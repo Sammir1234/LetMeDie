@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b0dejbo3qtdb6"]
 
-[ext_resource type="Script" uid="uid://d7r8l20tfntu" path="res://scripts/base_enemy_behaivor.gd" id="1_nxij1"]
+[ext_resource type="Script" uid="uid://d7r8l20tfntu" path="res://scripts/behaivor_scripts/base_enemy_behaivor.gd" id="1_nxij1"]
 [ext_resource type="Texture2D" uid="uid://18ihlwo876gm" path="res://textures/placeholders/amogus.jpg" id="2_i7jhq"]
-[ext_resource type="Script" uid="uid://b1f4wucxlk5f8" path="res://scripts/threat_behavior.gd" id="3_i7jhq"]
+[ext_resource type="Script" uid="uid://b1f4wucxlk5f8" path="res://scripts/behaivor_scripts/threat_behavior.gd" id="3_i7jhq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82qyd"]
 size = Vector2(28, 27)
