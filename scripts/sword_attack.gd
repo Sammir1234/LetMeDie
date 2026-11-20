@@ -28,8 +28,6 @@ func _ready() -> void:
 
 	# Подключение сигнала столкновения с физическими телами
 	body_entered.connect(_on_body_entered)
-	# Подключение сигнала столкновения с другими Area2D
-	area_entered.connect(_on_area_entered)
 	# Подключение сигнала окончания анимации
 	anim.animation_finished.connect(_on_animation_finished)
 
@@ -84,15 +82,6 @@ func _on_body_entered(body: Node2D) -> void:
 
 	# Регистрация попадания
 	hit_target()
-
-
-# Обработка столкновения с другой областью Area2D
-func _on_area_entered(area: Area2D) -> void:
-	if area == get_parent():
-		return
-
-	hit_target()
-
 
 # Обработка попадания меча по объекту
 func hit_target() -> void:
