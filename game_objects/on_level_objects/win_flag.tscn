@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cck281iej7jdv"]
 
 [ext_resource type="Script" uid="uid://cv3hpevwcs0jm" path="res://scripts/win.gd" id="1_sbgyi"]
-[ext_resource type="Texture2D" uid="uid://bl1hgjhykafe6" path="res://textures/placeholders/WinFlag.png" id="2_rd6d6"]
+[ext_resource type="Texture2D" uid="uid://bl1hgjhykafe6" path="res://textures/WinFlag.png" id="2_rd6d6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(83, 139)

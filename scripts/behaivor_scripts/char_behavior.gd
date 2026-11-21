@@ -22,6 +22,7 @@ var is_bouncing: bool = false # Проверка отталкивания
 
 var can_move: bool = true # Блокировка и разблокировка управления
 var is_dead: bool = false # Флаг смерти
+var is_win: bool = false # Флаг победы
 
 const DIRECTION_MEMORY_TIME = 250 # Время памяти направления атаки
 var last_vertical_direction = Vector2.ZERO # Направление вертикальной атаки
@@ -81,6 +82,21 @@ func die() -> void:
 	# Перезагрузка сцены
 	get_tree().reload_current_scene()
 
+func win() -> void:
+	if is_win:
+		return
+	
+	is_win = true
+	velocity = Vector2.ZERO
+	set_physics_process(false)
+	
+	can_move = false
+	can_attack = false
+	
+	await get_tree().create_timer(0.35).timeout
+	get_tree().change_scene_to_file("res://levels/victory_screen.tscn")
+
+
 func get_attack_direction() -> Vector2:
 	if Input.is_action_pressed("ui_up"):
 		return Vector2.UP
@@ -135,8 +151,8 @@ func _physics_process(delta: float) -> void:
 		if collision.get_collider().name == "TileMapTraps":
 			die()
 		if collision.get_collider().name == "WinFlag":
-			await get_tree().create_timer(0.35).timeout
-			get_tree().change_scene_to_file("res://levels/victory_screen.tscn")
+			win()
+
 	
 	if Input.is_action_just_pressed("ui_up"):
 		last_vertical_direction = Vector2.UP
