@@ -8,9 +8,6 @@
 [ext_resource type="AudioStream" uid="uid://bq8cm6qlnp7j8" path="res://sounds/die.mp3" id="5_tysbl"]
 [ext_resource type="Texture2D" uid="uid://xu4jlfm8x3v5" path="res://textures/spritesheets/animations/Slash_short.svg" id="7_qf0cs"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nxij1"]
-size = Vector2(31, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_qf0cs"]
 atlas = ExtResource("2_3i3ks")
 region = Rect2(0, 495, 96, 96)
@@ -212,6 +209,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1yet3"]
+radius = 10.568379
+height = 34.131252
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tysbl"]
@@ -317,11 +318,6 @@ animations = [{
 [node name="MainChar" type="CharacterBody2D" unique_id=1468150298]
 script = ExtResource("1_j5c27")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=795485704]
-position = Vector2(-0.5, 0)
-scale = Vector2(1.5406188, 1.4799997)
-shape = SubResource("RectangleShape2D_nxij1")
-
 [node name="MainCamera" type="Camera2D" parent="." unique_id=1743912482]
 zoom = Vector2(1.2, 1.2)
 limit_left = -500
@@ -339,6 +335,11 @@ position = Vector2(-0.5000019, 0)
 scale = Vector2(0.5104166, 0.5)
 sprite_frames = SubResource("SpriteFrames_riqys")
 animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=795485704]
+position = Vector2(2.3841858e-07, 1)
+scale = Vector2(-1.8924379, -1.3477385)
+shape = SubResource("CapsuleShape2D_1yet3")
 
 [node name="SwordAttack" type="Area2D" parent="." unique_id=1417645870]
 visible = false
